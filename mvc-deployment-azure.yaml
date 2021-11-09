@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mvc-app
-        image: tgrimm/mvc-app:v2.#{$(Build.BuildId)}#
+        image: tgrimm/mvc-app:v2.#{Build.BuildId}#
         ports:
         - containerPort: 80
         resources:
