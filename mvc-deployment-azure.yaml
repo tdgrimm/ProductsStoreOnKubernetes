@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mvc-app
-        image: tgrimm/mvc-app:v1
+        image: tgrimm/mvc-app:v2.#{$(Build.BuildId)}#
         ports:
         - containerPort: 80
         resources:
@@ -25,7 +25,7 @@ spec:
             cpu: 100m
             memory: "50Mi"        
         env:
-          - name: ConnectionStrings__KubernetesTestContext
+          - name: ConnectionStrings__MvcAppContext
             valueFrom:
               secretKeyRef: 
                 name: mssql-secret
