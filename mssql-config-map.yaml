@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mssql-connection-configmap
+  labels:
+    app: mvc-app
+data:
+  db-connection-string: "Server=mssql-service;Initial Catalog=KubernetesTest;Timeout=60;User Id=sa;Password=Scruffy@OCT2021"
